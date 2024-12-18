@@ -7,5 +7,7 @@
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
 #include <iostream>
+#include <vector>
+#include <optional>
 #pragma comment(lib,"glfw3.lib")
 #pragma comment(lib,"vulkan-1.lib")
