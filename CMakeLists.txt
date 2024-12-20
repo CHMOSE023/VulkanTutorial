@@ -17,6 +17,9 @@ link_directories   ("${VULKAN_SDK}/Lib")           # Vulkan SDK Library
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/deps/include")  # 搜索目录
 link_directories   ("${CMAKE_CURRENT_SOURCE_DIR}/deps/lib")       # 连接器搜索目录
 
+# 复制Shaders编译目录
+file(GLOB Shaders "${CMAKE_CURRENT_SOURCE_DIR}/deps/shaders/*") 
+file(COPY ${Shaders} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/shaders )
 
 # 设置 src 目录路径
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
