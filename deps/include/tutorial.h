@@ -10,5 +10,6 @@
 #include <vector>
 #include <optional>
 #include <set>
+#include <algorithm>// std::clamp
 #pragma comment(lib,"glfw3.lib")
 #pragma comment(lib,"vulkan-1.lib")
