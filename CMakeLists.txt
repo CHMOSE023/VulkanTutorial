@@ -17,11 +17,13 @@ link_directories   ("${VULKAN_SDK}/Lib")           # Vulkan SDK Library
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/deps/include")  # 搜索目录
 link_directories   ("${CMAKE_CURRENT_SOURCE_DIR}/deps/lib")       # 连接器搜索目录
 
-# 复制Shaders编译目录
+# 复制资源文件到程序目录下
 file(GLOB Shaders "${CMAKE_CURRENT_SOURCE_DIR}/deps/shaders/*") 
 file(COPY ${Shaders} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/shaders )
 file(GLOB Textures "${CMAKE_CURRENT_SOURCE_DIR}/deps/textures/*") 
 file(COPY ${Textures} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/textures )
+file(GLOB Models "${CMAKE_CURRENT_SOURCE_DIR}/deps/models/*") 
+file(COPY ${Models} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/models )
 
 # 设置 src 目录路径
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
