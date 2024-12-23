@@ -20,6 +20,8 @@ link_directories   ("${CMAKE_CURRENT_SOURCE_DIR}/deps/lib")       # 连接器搜
 # 复制Shaders编译目录
 file(GLOB Shaders "${CMAKE_CURRENT_SOURCE_DIR}/deps/shaders/*") 
 file(COPY ${Shaders} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/shaders )
+file(GLOB Textures "${CMAKE_CURRENT_SOURCE_DIR}/deps/textures/*") 
+file(COPY ${Textures} DESTINATION  ${CMAKE_CURRENT_BINARY_DIR}/textures )
 
 # 设置 src 目录路径
 set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
